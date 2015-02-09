@@ -1,0 +1,124 @@
+== Android Cookbook Examples
+
+This repo contains about seventy source code examples from the recipes published in the O'Reilly Android Cookbook (see http://androidcookbook.com/), a great source of tutorial material for the Android Developer. Not all recipes in the book or online have code accompanying them; this repo features code that was either linked by the contributor, or in a few cases, re-constructed as a New Project by the editor, for your convenience. 
+
+Further note that not all programs used in the book/online appear here; some of the examples in the book/online are only program fragments taken from other programs that can't be included. And of course some projects used as examples in the book/online are routinely hosted elsewhere.
+
+Each Directory comprises its own Eclipse project, and has a name that is cited at the end of the corresponding Recipe, under the "Source Code Download" section. If you open the repo in Eclipse with eGit, be sure to check the
+    "create all projects"
+checkbox. If you want to keep these mini-projects separate from your "regular" work, you may want to use the Git repo as an Eclipse workspace (use File->Switch Workspace->Other->Browse). The .metadata directory is already in .gitignore.
+
+Obviously the Googlezilla has spoken and we will have to migrate kicking and screaming to Android Studio and Gradle; pull requests for this would also be welcomed.
+
+You can download this as a Zip file, but then you won't get updates, and it will be hard to collaborate with the Editor and other contributors. If you're new to Git, see the page on GitHub about how to collaborate. You can either send diff/patch files or, if you forked your own copy, send a pull request.  Remember that GitHub is a free service for public projects!
+
+If you open the repo as an Eclipse Workspace and no projects appear, despair not! Just do File->Import...->General->Existing Projects Into Workspace, browse to the top of the repo (the list of projects should appear), be sure "Import projects into workspace" is NOT checked, and click Finish; wait a bit.
+
+Many of the projects may (depending on your version of Eclipse) give you some noise when you first open them due to bin and/or gen being missing. The Eclipse plug-in will usually create them but not notify that it's done so, meaning you just have to do Refresh (F5), failing that, close and re-open the project. Does not happen with current Eclipse, last I tried.
+
+There is neither a Wiki or a Tracker for this project, since bugs and suggestions about the code should be made on the Android Cookbook web site (http://androidcookbook.com/). Bugs or suggesions on the published edition of the book should go to http://shop.oreilly.com/product/0636920010241.do; you can also purchase the book there (which helps fund my continued work on this code base).
+
+=== Changes since the book
+
+N.B. There have been quite a few projects added since the first published edition of the book, and
+a few renamed, so if you have the printed edition prior to December, 2012 you 
+should rummage around here before re-typing anything that looks like a full example,
+and you will need to make the following adjustments:
+
+=== Wishlist
+
+There are some things I'd love it if people would contribute:
+
+	Maven and/or Gradle files for each project that doesn't already have one: always automate dependencies where possible!
+	Readme file for each project, to include a link back to the recipe in the book.
+
+=== What's here?
+
+[options="header"]
+|===========
+| Project		| Function | What it shows |
+| AndroidPlot | Graphing | plotting library |
+| AndroidRss | RSS Reader | - |
+| AppDownloader | Installs another app | Downloading, package management |
+| AutocompleteTextViewContacts | Contact picker with autocomplete | - |
+| AutoUpdater | App can update itself | see AppDownloader |
+| BackupManager | - | - |
+| BluetoothDemo | Bluetooth Connection | - |
+| CalAdder | Add appointment to Calendar | Calendar via Content Provider |
+| CheckBoxRadioButton | GUI demo | name says it |
+| ContentProviderBookmarks | List of bookmarks | Browser ContentProvider |
+| ContentProviderList | List of ContentProviders | - |
+| ContentProviderSample | Implement a ContentProvider | - |
+| ContentProviderTest | Test it | - |
+| CountDownTimerExample | Time-based activity | - |
+| CurrentMoodWidget | Application Widget | - |
+| CustomMenu | Menu | - |
+| CustomToast | Toast | - |
+| DialogDemos | Dialogs | - |
+| DigitalClock | Clock | - |
+| DisplayInfo | Info about the display | - |
+| DreamsDemo | Demo of "Dreams" (4.x screensaver) | - |
+| EmailTextView | Send contents of EditText via email | - |
+| EmailWithAttachments | Attach file to email | - |
+| EpochJSCalendar | Java + JavaScript | - |
+| FaceFinder | Face locator API in photos | - |
+| FacebookSdk | - | - |
+| FontDemo | Using a custom font | - |
+| GcmClient | Google Cloud Messaging - receiver | - |
+| GcmMockServer | Google Cloud Messaging - sender | - |
+| HelloCommandLine | HelloWorld | SDK |
+| HelloEclipse | HelloWorld | Eclipse ADT |
+| HelloMaven | HelloWorld | Maven, JayWay Plug-in |
+| HelloTestingTarget | ADT Testing - subject| - |
+| HelloTestingTestProject | ADT Testing - Tests | - |
+| HomeAppListView | A Home Application | ListView, running a program |
+| HoneycombGallery | Simple photo gallery | - |
+| HotContacts | Add a contact | ContactsContract, content provider |
+| IconizedListView | List View with Icon | - |
+| IntentsDemo | Intents | - |
+| JavascriptDataDemo | JavaScript from Java | - |
+| JpsTrack | This app has moved to http://github.com/IanDarwin/jpstrack[its own repo] | - |
+| ListViewAdvanced | ListView | - |
+| ListViewDemos | ListView | - |
+| ListViewEmpty | ListView with empty list: don't show blank screen! | - |
+| ListViewSectionHeader | ListView with section headers | - |
+| LocalBroadcastDemo | Local Broadcast Receiver | - |
+| MapDemosV2 | Google Maps V2 API | - |
+| MarketSearch | Search the Play Store | - |
+| MediaPlayerDemo | Play media | - |
+| MediaRecorderDemo | Simple sound recorder | - |
+| MyAccountAndSyncDemo | User account on device | - |
+| NdkDemo | Native Development Kit| C Code |
+| NotificationDemo | Notifications | - |
+| NumberPickers | UI for picking numbers | - |
+| OpenGlDemo | OpenGL graphics | - |
+| OrientationChanges | Rotation | - |
+| PdfShare | Create and share a PDF | - |
+| PhoneGapDemo | HTML5 app | phonegap/cordova |
+| PreferencesDemo | Preferences | - |
+| RGraphDemo | Using a graphing library | - |
+| RangeGraphDemo | Using a graphing library | - |
+| Rebooter | How to reboot, and why you can't | - |
+| SecondScreen | - | - |
+| SendSMS | Sends an SMS | - |
+| SelfUpdater | App that tests for updates and downloads them | App management, IntentService, Socket |
+| ShareActionProviderDemo | ICS "Share" action | - |
+| SimpleCalendar | - | - |
+| SimpleJumper | - | - |
+| SimplePool | Graphics | - |
+| SimpleTorchLight | Flashlight/torch from camera flash | - |
+| SlidingDrawer-Topdown | The "Sliding Drawer" view | - |
+| SoapDemo | XML SOAP Web Service | - |
+| Speaker | Text To Speech (TTS) | - |
+| SplashDialog | Splash screen | - |
+| TeleCorder | Telephone call recorder (in progress!) | - |
+| TelephonyManager | Displays phone info | - |
+| Tipster | Full app: compute and show restaurant bill with tip | - |
+| TodoModel | Part of TODO List | - |
+| TodoSyncClient | Part of TODO List | - |
+| TodoSyncServer | Part of TODO List | JavaEE-based server |
+| UniqueId | Find device's unique ID | - |
+| Vibrate | Make the device vibrate | - |
+| ViewPagerDemo | Swipe among views | - |
+| WindowBackgroundDemo | - | - |
+|===========
